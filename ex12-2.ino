@@ -6,6 +6,7 @@ LiquidCrystal_I2C lcd_i2c(0x27);
 int t;
 int h;
 int s;
+char ss[3];
 
 void setup()
 {
@@ -21,7 +22,7 @@ void loop()
   t = dht.readTemperature();
   h = dht.readHumidity();
   s = analogRead(14);
-  s = 99 - map(s, 281,4095, 0, 99);
+  s = 100 - map(s, 281,4095, 0, 100);
   
   Serial.print("溫度=");
   Serial.println(t);
@@ -44,9 +45,10 @@ void loop()
   lcd_i2c.print("%");
   lcd_i2c.setCursor(0,1);
   lcd_i2c.print("Soil Moist=");
+  sprintf(ss, "%3d", s);
   lcd_i2c.setCursor(11,1);
-  lcd_i2c.print(s);
-  lcd_i2c.setCursor(13,1);
+  lcd_i2c.print(ss);
+  lcd_i2c.setCursor(14,1);
   lcd_i2c.print("%");
   
   delay(1000);
