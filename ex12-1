@@ -11,6 +11,7 @@ char _lwifi_pass[] = "0911027768";
 MCSDevice mcs("DF07gb0C", "V9q47IqgA0LYq19q");
 MCSDisplayInteger temp("temp");
 MCSDisplayInteger humid("humid");
+MCSControllerOnOff MySwitch("MySwitch");
 
 DHT __dht2(4, DHT11);
 
@@ -27,7 +28,7 @@ void setup()
   while(!mcs.connected()) { mcs.connect(); }
   Serial.println("MCS 連線成功");
   Serial.begin(9600);
-//  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
   __dht2.begin();
 }
 
