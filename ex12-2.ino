@@ -21,7 +21,7 @@ void loop()
   t = dht.readTemperature();
   h = dht.readHumidity();
   s = analogRead(14);
-  s = map(s, 3800,4095, 99,0);
+  s = 99 - map(s, 281,4095, 0, 99);
   
   Serial.print("溫度=");
   Serial.println(t);
