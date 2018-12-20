@@ -5,10 +5,10 @@
 int t;
 int h;
 
-char _lwifi_ssid[] = "lita";
-char _lwifi_pass[] = "0911027768";
+char _lwifi_ssid[] = "ANCIENT";
+char _lwifi_pass[] = "11111111";
 
-MCSDevice mcs("DF07gb0C", "V9q47IqgA0LYq19q");
+MCSDevice mcs("D3iAIkU5", "kL90f3OI9pr9XtZQ");
 MCSDisplayInteger temp("temp");
 MCSDisplayInteger humid("humid");
 MCSControllerOnOff MySwitch("MySwitch");
