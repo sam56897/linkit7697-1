@@ -5,8 +5,8 @@
 int t;
 int h;
 
-char _lwifi_ssid[] = "MediaTek_Labs";
-char _lwifi_pass[] = "84149961";
+char _lwifi_ssid[] = "lita";
+char _lwifi_pass[] = "0911027768";
 
 MCSDevice mcs("DF07gb0C", "V9q47IqgA0LYq19q");
 MCSDisplayInteger temp("temp");
