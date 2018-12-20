@@ -12,7 +12,7 @@ MCSDevice mcs("DF07gb0C", "V9q47IqgA0LYq19q");
 MCSDisplayInteger temp("temp");
 MCSDisplayInteger humid("humid");
 
-DHT __dht2(2, DHT22);
+DHT __dht2(4, DHT11);
 
 void setup()
 {
